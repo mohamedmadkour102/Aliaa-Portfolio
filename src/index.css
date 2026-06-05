@@ -1,0 +1,72 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #111111;
+  --color-surface: #1a1a1a;
+  --color-text: #f2f2f2;
+  --color-muted: #8a8a8a;
+  --color-accent: #d4b483;
+  --color-border: rgba(255, 255, 255, 0.06);
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'DM Sans', system-ui, sans-serif;
+
+  --spacing-section: clamp(5rem, 12vw, 9rem);
+  --spacing-block: clamp(2rem, 5vw, 4rem);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-bg text-text font-sans antialiased;
+    font-family: var(--font-sans);
+  }
+
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-accent) 35%, transparent);
+    color: var(--color-text);
+  }
+}
+
+@layer utilities {
+  .font-serif {
+    font-family: var(--font-serif);
+  }
+
+  .font-sans {
+    font-family: var(--font-sans);
+  }
+
+  .section-padding {
+    padding-top: var(--spacing-section);
+    padding-bottom: var(--spacing-section);
+  }
+
+  .fade-in {
+    animation: fadeIn 0.9s ease forwards;
+  }
+
+  .fade-in-delay {
+    animation: fadeIn 0.9s ease 0.15s forwards;
+    opacity: 0;
+  }
+
+  .fade-in-delay-2 {
+    animation: fadeIn 0.9s ease 0.3s forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
