@@ -20,9 +20,25 @@
     scroll-behavior: smooth;
   }
 
+  html[data-theme='dark'],
+  html:not([data-theme]) {
+    color-scheme: dark;
+  }
+
+  html[data-theme='light'] {
+    color-scheme: light;
+    --color-bg: #ebe6df;
+    --color-surface: #e0d9cf;
+    --color-text: #1c1917;
+    --color-muted: #6b6560;
+    --color-accent: #a17f45;
+    --color-border: rgba(28, 25, 23, 0.1);
+  }
+
   body {
     @apply bg-bg text-text font-sans antialiased;
     font-family: var(--font-sans);
+    transition: background-color 0.4s ease, color 0.4s ease;
   }
 
   ::selection {

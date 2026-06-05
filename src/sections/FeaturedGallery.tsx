@@ -3,6 +3,7 @@ import { artworks, categories } from '../data/artworks'
 import type { ArtworkCategory } from '../types'
 import { CategoryTabs } from '../components/CategoryTabs'
 import { GalleryGrid } from '../components/GalleryGrid'
+import { ScrollReveal } from '../components/ScrollReveal'
 
 export function FeaturedGallery() {
   const [activeCategory, setActiveCategory] = useState<ArtworkCategory | 'All'>('All')
@@ -15,7 +16,7 @@ export function FeaturedGallery() {
   return (
     <section id="gallery" className="section-padding bg-surface/30">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
-        <div className="mx-auto max-w-2xl text-center">
+        <ScrollReveal className="mx-auto max-w-2xl text-center">
           <p className="text-xs tracking-[0.3em] text-accent uppercase">Collection</p>
           <h2 className="mt-4 font-serif text-4xl tracking-wide text-text md:text-5xl lg:text-6xl">
             Selected Works
@@ -24,15 +25,15 @@ export function FeaturedGallery() {
             A curated selection of paintings and digital works — exploring emotion,
             connection, and the spaces between.
           </p>
-        </div>
+        </ScrollReveal>
 
-        <div className="mt-14">
+        <ScrollReveal delay={0.1} className="mt-14">
           <CategoryTabs
             categories={categories}
             active={activeCategory}
             onChange={setActiveCategory}
           />
-        </div>
+        </ScrollReveal>
 
         <div className="mt-16 lg:mt-20">
           <GalleryGrid artworks={filtered} />

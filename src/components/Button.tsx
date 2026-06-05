@@ -9,6 +9,7 @@ interface ButtonProps {
   onClick?: () => void
   type?: 'button' | 'submit'
   className?: string
+  disabled?: boolean
 }
 
 const base =
@@ -29,8 +30,9 @@ export function Button({
   onClick,
   type = 'button',
   className = '',
+  disabled = false,
 }: ButtonProps) {
-  const classes = `${base} ${variants[variant]} ${className}`
+  const classes = `${base} ${variants[variant]} ${className} ${disabled ? 'pointer-events-none opacity-60' : ''}`
 
   if (href?.startsWith('#')) {
     return (
@@ -49,7 +51,7 @@ export function Button({
   }
 
   return (
-    <button type={type} onClick={onClick} className={classes}>
+    <button type={type} onClick={onClick} className={classes} disabled={disabled}>
       {children}
     </button>
   )
