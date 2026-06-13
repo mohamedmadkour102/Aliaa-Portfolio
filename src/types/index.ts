@@ -14,4 +14,5 @@ export interface Artwork {
   dimensions?: string
   sold?: boolean
   exhibitedAt?: string
+  description?: string
 }

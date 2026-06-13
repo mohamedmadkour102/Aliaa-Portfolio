@@ -101,6 +101,14 @@ export function ArtworkDetail() {
                 </div>
               )}
             </dl>
+            {artwork.description && (
+              <section className="mt-10 border-t border-[var(--color-border)] pt-10">
+                <h2 className="font-serif text-2xl text-text">About This Work</h2>
+                <p className="mt-6 max-w-2xl whitespace-pre-line leading-relaxed text-muted">
+                  {artwork.description}
+                </p>
+              </section>
+            )}
             <ShareButtons title={artwork.title} />
           </header>
         </ScrollReveal>
