@@ -208,19 +208,23 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'work-19',
-    title: 'Landscape I',
+    title: 'Feral Growth',
     medium: 'Oil on Canvas',
     year: 2025,
     category: 'Oil on Canvas',
-    image: '/artworks/landscape1.jpeg',
+    image: '/artworks/19.jpeg',
+    description:
+      '"There\'s a tree that grows in Brooklyn. Some people call it the Tree of Heaven. No matter where its seed falls, it makes a tree which struggles to reach the sky. It grows in boarded-up lots and out of neglected rubbish heaps. It is the only tree that grows out of cement. It grows lushly... survives without sun, water, and seemingly without earth. It would be considered beautiful except that there are too many of it." — Betty Smith',
   },
   {
     id: 'work-20',
-    title: 'Landscape II',
+    title: 'Holding On',
     medium: 'Oil on Canvas',
     year: 2025,
     category: 'Oil on Canvas',
-    image: '/artworks/landscape2.jpeg',
+    image: '/artworks/20.jpeg',
+    description:
+      'An artwork that reflects the importance of protecting trees and natural environments from deforestation and wildfires. The contrast between living and damaged vegetation emphasizes the need to preserve nature and maintain the balance of our ecosystems.',
   },
 ]
 
