@@ -234,11 +234,11 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'work-21',
-    title: 'Work of the Hand',
+    title: 'What Hands Do',
     medium: 'Oil on Canvas',
     year: 2026,
     category: 'Oil on Canvas',
-    dimensions: '85 × 50 cm',
+    dimensions: '54 × 54 cm',
     image: '/artworks/21.jpeg',
     description: workOfTheHandDescription,
   },
