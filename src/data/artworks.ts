@@ -14,6 +14,9 @@ We spoke without listening.
 We thought we were speaking to one another,
 while all we heard was the echo of our own solitude.`
 
+export const workOfTheHandDescription = `What Hands Do explores the quiet weight of human choice.
+Hands become the place where intention takes form—where tenderness, care, creation, and destruction all begin. Rather than telling a single story, the paintings linger in the fragile space between what we are capable of giving and what we choose to leave behind.`
+
 export const artworks: Artwork[] = [
   {
     id: 'work-01',
@@ -23,6 +26,7 @@ export const artworks: Artwork[] = [
     category: 'Oil on Canvas',
     dimensions: '85 × 50 cm',
     image: '/artworks/1.jpeg',
+    description: workOfTheHandDescription,
   },
   {
     id: 'work-02',
@@ -227,6 +231,16 @@ export const artworks: Artwork[] = [
     image: '/artworks/20.jpeg',
     description:
       'An artwork that reflects the importance of protecting trees and natural environments from deforestation and wildfires. The contrast between living and damaged vegetation emphasizes the need to preserve nature and maintain the balance of our ecosystems.',
+  },
+  {
+    id: 'work-21',
+    title: 'Work of the Hand',
+    medium: 'Oil on Canvas',
+    year: 2026,
+    category: 'Oil on Canvas',
+    dimensions: '85 × 50 cm',
+    image: '/artworks/21.jpeg',
+    description: workOfTheHandDescription,
   },
 ]
 
