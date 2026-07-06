@@ -2,6 +2,9 @@ import type { Artwork } from '../types'
 
 function getGroupKey(artwork: Artwork): string {
   if (artwork.title.startsWith('O Noble Listeners')) return 'O Noble Listeners'
+  if (artwork.title === 'Work of the Hand' || artwork.title === 'What Hands Do') {
+    return 'Work of the Hand'
+  }
   return artwork.title
 }
 
