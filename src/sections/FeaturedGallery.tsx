@@ -4,13 +4,17 @@ import type { ArtworkCategory } from '../types'
 import { CategoryTabs } from '../components/CategoryTabs'
 import { GalleryGrid } from '../components/GalleryGrid'
 import { ScrollReveal } from '../components/ScrollReveal'
+import { groupArtworksByTitle } from '../utils/groupArtworksByTitle'
 
 export function FeaturedGallery() {
   const [activeCategory, setActiveCategory] = useState<ArtworkCategory | 'All'>('All')
 
   const filtered = useMemo(() => {
-    if (activeCategory === 'All') return artworks
-    return artworks.filter((a) => a.category === activeCategory)
+    const items =
+      activeCategory === 'All'
+        ? artworks
+        : artworks.filter((a) => a.category === activeCategory)
+    return groupArtworksByTitle(items)
   }, [activeCategory])
 
   return (
