@@ -19,7 +19,7 @@ function sortWithinGroup(groupKey: string, items: Artwork[]): Artwork[] {
   return items
 }
 
-export function groupArtworksByTitle(items: Artwork[]): Artwork[] {
+export function groupArtworksForGallery(items: Artwork[]): Artwork[][] {
   const groups = new Map<string, Artwork[]>()
   const groupOrder: string[] = []
 
@@ -32,5 +32,5 @@ export function groupArtworksByTitle(items: Artwork[]): Artwork[] {
     groups.get(key)!.push(artwork)
   }
 
-  return groupOrder.flatMap((key) => sortWithinGroup(key, groups.get(key)!))
+  return groupOrder.map((key) => sortWithinGroup(key, groups.get(key)!))
 }

@@ -4,7 +4,7 @@ import type { ArtworkCategory } from '../types'
 import { CategoryTabs } from '../components/CategoryTabs'
 import { GalleryGrid } from '../components/GalleryGrid'
 import { ScrollReveal } from '../components/ScrollReveal'
-import { groupArtworksByTitle } from '../utils/groupArtworksByTitle'
+import { groupArtworksForGallery } from '../utils/groupArtworksByTitle'
 
 export function FeaturedGallery() {
   const [activeCategory, setActiveCategory] = useState<ArtworkCategory | 'All'>('All')
@@ -14,7 +14,7 @@ export function FeaturedGallery() {
       activeCategory === 'All'
         ? artworks
         : artworks.filter((a) => a.category === activeCategory)
-    return groupArtworksByTitle(items)
+    return groupArtworksForGallery(items)
   }, [activeCategory])
 
   return (
@@ -40,7 +40,7 @@ export function FeaturedGallery() {
         </ScrollReveal>
 
         <div className="mt-16 lg:mt-20">
-          <GalleryGrid artworks={filtered} />
+          <GalleryGrid artworkGroups={filtered} />
         </div>
       </div>
     </section>
